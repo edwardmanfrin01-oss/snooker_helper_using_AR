@@ -6,7 +6,7 @@ Implementation of a system for evaluating the trajectory of a shot, with the pur
 
 How it works:
 
-1. in the code "config.py", you can set the OUTPUT\_DIR where all the clips, results and files will be stored, based on a datetime name for the folder
+1. in the code "config.py", you can set the OUTPUT\_DIR where all the clips, results and files will be stored, based on a "counting-name" for the folder
 
 2. Generate Aruco markers using the code "aruco\_generator.py", and print them, they must be put on the corners of the pool and on the cue
 
