@@ -45,7 +45,7 @@ cv2.rectangle(margin_mask, (MARGIN, MARGIN),
 
 
 def build_binary(avg_gray):
-    """Background subtraction → blur → threshold → morphology → mask."""
+    """Background subtraction -> blur -> threshold -> morphology -> mask."""
     diff = cv2.absdiff(avg_gray, background_gray)
     diff = cv2.GaussianBlur(diff, (BLUR_KERNEL, BLUR_KERNEL), 0)
     _, binary = cv2.threshold(diff, THRESHOLD, 255, cv2.THRESH_BINARY)
@@ -57,7 +57,7 @@ def build_binary(avg_gray):
 
 def watershed_markers(binary, avg_bgr):
     """
-    Distance transform → local maxima as seeds → watershed.
+    Distance transform -> local maxima as seeds -> watershed.
     Returns the labelled marker image (-1 = boundary, 1 = bg, >1 = regions).
     """
     dist = cv2.distanceTransform(binary, cv2.DIST_L2, 5)
